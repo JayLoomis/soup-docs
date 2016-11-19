@@ -35,14 +35,14 @@ chump would pass up BeautifulSoup for Python HTML work.
 
 I've organized this documentation into three parts:
 
--   [Conceptual Overview](/conceptual_overview) gives an overview of how the
+-   [Conceptual Overview](conceptual_overview) gives an overview of how the
     package works. It walks you through the individual tasks with all the
     gotchas and caveats described.
     
--   [How-to](/how-to) gives succinct instructions for indiviudal tasks with code
+-   [How-to](how-to) gives succinct instructions for indiviudal tasks with code
     examples.
     
--   [Reference](/reference) describes each programming element in the package in
+-   [Reference](reference) describes each programming element in the package in
     detail.
 
 If you're excited to just get something working without really understanding
