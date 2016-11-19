@@ -6,10 +6,11 @@ Enhanced documentation for Beautiful Soup
 Leonard Richardson's
 [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) is an
 excellent Python package for dealing with markup files, especially HTML.
-However, as with so many great libraries, its documentation isn't great, and
-artificially increases the learning curve. This project is my attempt to
-improve the documentation experience. I'm doing this mostly because I want to
-keep using Beautiful Soup in my own work, and I want a useful reference.
+However, as with so many great libraries, I found my learning curve to be
+steepended by the way the documentation presented it. This project is my
+attempt to improve the documentation experience. I'm doing this mostly
+because I want to keep using Beautiful Soup in my own work, and I want a
+useful reference.
 
 ## Beautiful Soup overview
 
