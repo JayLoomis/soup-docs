@@ -18,20 +18,20 @@ it some markup text and it creates a representation of that markup as nested
 objects. Most of the members of those objects represent ways to move around
 the objects to find what you need.
 
-## Disclaimer
+People often talk about Beautiful Soup as a great tool for wrangling sketchy
+HTML. I can't really attest to this, because I've only used it for my own
+content, and I'm pretty fastidious when it comes to well-formedness and 
+prettiness of markup. I can say from personal experience that it works extremely
+well for navigating clean HTML, and I believe what I've heard about the messy
+stuff, too.
 
-I didn't ask permission to do this work. I have no affiliation with Leonard
-Richardson. Nothing here is official, or guaranteed to be up-to-date with the
-code. I'm trying hard to be accurate to the latest (macOS) `pip`-accessible
-version at the time of writing, which is 4.5.1.
+It's my view that using the `html` package to parse your way through HTML
+maually is a rookie mistake (one that I was prompted to make by misleading
+comments in Python books that should have known better). Unless there's an
+extraordinarily good reason to (and I honestly can't think of one), only a
+chump would pass up BeautifulSoup for Python HTML work.
 
-If I get this to a state that I'm happy with, maybe I'll reach out to Mr.
-Richardson to offer it up in a more official way. But probably not, because
-that kind of interaction is pretty uncomfortable ("Hi, I'm a technical
-writer, and I didn't like the work you did documenting your really great
-project that you didn't get paid for.").
-
-## How to use the docs
+## How to use these docs
 
 I've organized this documentation into three parts:
 
@@ -57,11 +57,29 @@ If looking at the inner-workings of something best helps you understand things,
 or if you've used Beautiful Soup before and just need to remember syntax, the
 [Reference](/reference) is the place for you.
 
+## Disclaimer
+
+I didn't ask permission to do this work. I have no affiliation with Leonard
+Richardson. Nothing here is official, or guaranteed to be up-to-date with the
+code. I'm trying hard to be accurate to the latest (macOS) `pip`-accessible
+version at the time of writing, which is 4.5.1.
+
+If I get this to a state that I'm happy with, maybe I'll reach out to Mr.
+Richardson to offer it up in a more official way. But probably not, because
+that kind of interaction is pretty uncomfortable ("Hi, I'm a technical
+writer, and I didn't like the work you did documenting your really great
+project that you didn't get paid for.").
+
+## Important links
+
+The source of truth must naturally come from the developer:
+
+-    [Beautiful Soup official site](https://www.crummy.com/software/BeautifulSoup/)
+-    [Official documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
 <!--
 ----|----|10--|----|20--|----|30--|----|40--|----|50--|----|60--|----|70--|----|
 -->
-
-## Programming guide
 
 ## Reference
 
@@ -81,8 +99,8 @@ Beautiful Soup defines four fundamentally important data types:
 The **Tag** class (**bs4.element.Tag**) is the primary data type used by
 Beautiful Soup to represent markup element data. 
 
-| Attribute                                     | Description                                                                                       |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Attribute                                    | Description                                                                                       |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | [_attrs_](#tagattrs)                         | A dictionary containing the element's attributes.                                                 |
 | [_children_](#tagchildren)                   | An generator to iterate through the direct children of this element.                              |
 | [_contents_](#tagcontents)                   | A list of all the direct children of this element.                                                |
@@ -99,7 +117,7 @@ Beautiful Soup to represent markup element data.
 | [_string_](#tagstring)                       | The string inside this element, if this element has only one child that is a **NavigableString**. |
 | [_strings_](#tagstrings)                     | A generator to iterate through all of the **NavigableString**s in the element.                    |
 | [_stripped_strings_](#tagstripped_strings)   | As _strings_, but generates the strings with leading and trailing whitespace removed.             |
-| [<_tag name_>](#tagtag-name)             | The first instance of the specified tag in this element (equivalent to **Tag**.**find**()).       |
+| [<_tag name_>](#tagtag-name)                 | The first instance of the specified tag in this element (equivalent to **Tag**.**find**()).       |
 
 ##### Tag.attrs
 
