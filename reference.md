@@ -9,7 +9,7 @@ Beautiful Soup defines four fundamentally important data types:
 | [**bs4.BeautifulSoup**](#beautifulsoup)             | The core object for an instance of parsed markup, contains the others. |
 | [**bs4.element.Tag**](#tag)                         | Represents elements that can contain children.                         |
 | [**bs4.element.NavigableString**](#navigablestring) | Represents text elements.                                              |
-| [**bs4.element.Comment**](#comment)                 | Like **NavigableString**, but renders with comment taggin in markup.   |
+| [**bs4.element.Comment**](#comment)                 | Like **NavigableString**, but renders with comment tagging in markup.   |
 
 ### BeautifulSoup
 
