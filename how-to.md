@@ -18,6 +18,41 @@ to those objects in a variety of ways:
 -   Add or remove enclosing tags for an element
 -   Copy elements from one one tag to another
 
+### Remove elements
+
+Removing elements from the tree is pretty easy:
+
+#### To delete a tag from the tree
+
+```python
+html = '<div><ul><li>one</li><li>two</li><li>three</li><li>four</li></ul></div>'
+
+soup = BeautifulSoup(html, 'html.parser')
+
+tag = soup.ul
+
+tag.decompose()
+```
+
+Note that [decompose] removes the calling tag along with all of its contents and
+destroys it. You may not want to take a drastic step.
+
+#### To remove a containing tag while leaving its contents behind
+
+```python
+html = '<div><ul><li>one</li><li>two</li><li>three</li><li>four</li></ul></div>'
+
+soup = BeautifulSoup(html, 'html.parser')
+
+tag = soup.ul
+
+tag.unwrap()
+# <ul></ul>
+```
+
+The tag still exists, but its contents are lesft in the tree with the same
+parent it used to have.
+
 ### Copy elements from one one tag to another
 
 There are many scenarios in which you want to move the contents of one tag into
