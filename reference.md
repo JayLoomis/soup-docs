@@ -36,13 +36,15 @@ The **Tag** class (**bs4.element.Tag**) is the primary data type used by
 Beautiful Soup to represent markup element data. You use the properties and
 methods of **Tag** for most navigation of HTML strings.
 
+#### Properties
+
 | Property                                     | Description                                                                                       |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | [_attrs_](#tagattrs)                         | A dictionary containing the element's attributes.                                                 |
 | [_children_](#tagchildren)                   | An generator to iterate through the direct children of this element.                              |
 | [_contents_](#tagcontents)                   | A list of all the direct children of this element.                                                |
-| [_descendants_](#descendants)                | A generator to recursively iterate through the children of this element.
-| [_name_](#tagname)                           | The name of the element that's represented by the **Tag**.
+| [_descendants_](#descendants)                | A generator to recursively iterate through the children of this element.                          |
+| [_name_](#tagname)                           | The name of the element that's represented by the **Tag**.                                        |
 | [_next_element_](#tagnext_element)           | The next markup element in the source text.                                                       |
 | [_next_elements_](#tagnext_elements)         | A generator to iterate through all the following elements.                                        |
 | [_next_sibling_](#tagnext_sibling)           | The next markup element with the same parent as this one.                                         |
@@ -58,35 +60,86 @@ methods of **Tag** for most navigation of HTML strings.
 | [_stripped_strings_](#tagstripped_strings)   | As _strings_, but generates the strings with leading and trailing whitespace removed.             |
 | [<_tag name_>](#tagtag-name)                 | The first instance of the specified tag in this element (equivalent to **Tag**.**find**()).       |
 
+#### Methods
 
-| Method                                     | Description                                                         |
-| ------------------------------------------ | ------------------------------------------------------------------- |
-| find              
-| find_all
-| find_parent
-| find_parents
-| find_next_sibling
-| find_next_siblings
-| find_previous_sibling
-| find_previous_siblings
-| find_next
-| find_all_next
-| find_previous
-| find_all_previous
-| select
-| append
-| insert
-| insert_before
-| insert_after
-| clear
-| extract
-| decompose
-| replace_with
-| wrap
-| unwrap
-| prettify
-| get_text
+| Method                                                   | Description                                                                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [**find**](#tagfind)                                     | Returns the first occurance of an element matching the specified search filter within the **Tag**.           |
+| [**find_all**](#tagfind_all)                             | Returns a generator to iterate through all elements matching the specified search filter within the **Tag**. |
+| [**find_parent**](#tagfind_parent)                       | As **find**, but searches the parental line of the current **Tag**.                                          |
+| [**find_parents**](#tagfind_parents)                     | As **find_all**, but searches the parental line of the current **Tag**.                                      |
+| [**find_next_sibling**](#tagfind_next_sibling)           |
+| [**find_next_siblings**](#tagfind_next_siblings)         |
+| [**find_previous_sibling**](#tagfind_previous_sibling)   |
+| [**find_previous_siblings**](#tagfind_previous_siblings) |
+| [**find_next**](#tagfind_next)                           |
+| [**find_all_next**](#tagfind_all_next)                   |
+| [**find_previous**](#tagfind_previous)                   |
+| [**find_all_previous**](#tagfind_all_previous)           |
+| [**select**](#tagselect)                                 |
+| [**append**](#tagappend)                                 |
+| [**insert**](#taginsert)                                 |
+| [**insert_before**](#taginsert_before)                   |
+| [**insert_after**](#taginsert_after)                     |
+| [**clear**](#tagclear)                                   |
+| [**extract**](#tagextract)                               |
+| [**decompose**](#tagdecompose)                           |
+| [**replace_with**](#tagreplace_with)                     |
+| [**wrap**](#tagwrap)                                     |
+| [**unwrap**](#tagunwrap)                                 |
+| [**prettify**](#tagprettify)                             |
+| [**get_text**](#tagget_text)                             |
 
+
+#### Tag.find
+
+#### Tag.find_all
+
+#### Tag.find_parent
+
+#### Tag.find_parents
+
+#### Tag.find_next_sibling
+
+#### Tag.find_next_siblings
+
+#### Tag.find_previous_sibling
+
+#### Tag.find_previous_siblings
+
+#### Tag.find_next
+
+#### Tag.find_all_next
+
+#### Tag.find_previous
+
+#### Tag.find_all_previous
+
+#### Tag.select
+
+#### Tag.append
+
+#### Tag.insert
+
+#### Tag.insert_before
+
+#### Tag.insert_after
+
+#### Tag.clear
+
+#### Tag.extract
+
+#### Tag.decompose
+
+#### Tag.replace_with
+
+#### Tag.wrap
+
+#### Tag.unwrap
+
+#### Tag.prettify
+
+#### Tag.get_text
 
 #### Tag.attrs
 
