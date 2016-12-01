@@ -73,7 +73,7 @@ print(removed_tag)
 
 Note that this is the only way to remove a **NavigableString**. You can't use 
 decompose, I guess because it is explicitly for removing tags that (might)
-contain other elements&nbsp;it's for pruning the tree.
+contain other elements&mdash;it's for pruning the tree.
 
 ### Copy elements from one one tag to another
 
@@ -129,7 +129,7 @@ for element in reversed(old_list.contents):
 ```
 
 Note that the specific example I give above is a bad one for real-world use,
-because there is a much easier way to change the type of list&nbsp;just change
+because there is a much easier way to change the type of list&mdash;just change
 the tag's name:
 
 ```python
