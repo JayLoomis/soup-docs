@@ -37,7 +37,7 @@ tag.decompose()
 Note that [decompose] removes the calling tag along with all of its contents and
 destroys it. You may not want to take a drastic step.
 
-#### To remove a containing tag while leaving its contents behind
+#### To remove a tag while leaving its contents behind
 
 ```python
 html = '<div><ul><li>one</li><li>two</li><li>three</li><li>four</li></ul></div>'
@@ -52,6 +52,28 @@ tag.unwrap()
 
 The tag still exists, but its contents are lesft in the tree with the same
 parent it used to have.
+
+#### To remove and save an element and its contents
+
+```python
+html = '<div><ul><li>one</li><li>two</li><li>three</li><li>four</li></ul></div>'
+
+soup = BeautifulSoup(html, 'html.parser')
+
+tag = soup.ul
+
+removed_tag = tag.find('li').extract()
+
+print(tag)
+# <ul><li>two</li><li>three</li><li>four</li></ul>
+
+print(removed_tag)
+# <li>one</li>
+```
+
+Note that this is the only way to remove a **NavigableString**. You can't use 
+decompose, I guess because it is explicitly for removing tags that (might)
+contain other elements&nbsp;it's for pruning the tree.
 
 ### Copy elements from one one tag to another
 
