@@ -128,7 +128,13 @@ for element in reversed(old_list.contents):
     new_list.append(element)
 ```
 
+Note that the specific example I give above is a bad one for real-world use,
+because there is a much easier way to change the type of list&nbsp;just change
+the tag's name:
 
+```python
+soup.ul.name = 'ol'
+```
 <!--
 ----|----|10--|----|20--|----|30--|----|40--|----|50--|----|60--|----|70--|----|
 -->
