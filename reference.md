@@ -41,6 +41,7 @@ methods of **Tag** for most navigation of HTML strings.
 | [_attrs_](#tagattrs)                         | A dictionary containing the element's attributes.                                                 |
 | [_children_](#tagchildren)                   | An generator to iterate through the direct children of this element.                              |
 | [_contents_](#tagcontents)                   | A list of all the direct children of this element.                                                |
+| [_descendants_](#descendants)                | A generator to recursively iterate through the children of this element.
 | [_name_](#tagname)                           | The name of the element that's represented by the **Tag**.
 | [_next_element_](#tagnext_element)           | The next markup element in the source text.                                                       |
 | [_next_elements_](#tagnext_elements)         | A generator to iterate through all the following elements.                                        |
@@ -56,6 +57,36 @@ methods of **Tag** for most navigation of HTML strings.
 | [_strings_](#tagstrings)                     | A generator to iterate through all of the **NavigableString**s in the element.                    |
 | [_stripped_strings_](#tagstripped_strings)   | As _strings_, but generates the strings with leading and trailing whitespace removed.             |
 | [<_tag name_>](#tagtag-name)                 | The first instance of the specified tag in this element (equivalent to **Tag**.**find**()).       |
+
+
+| Method                                     | Description                                                         |
+| ------------------------------------------ | ------------------------------------------------------------------- |
+| find              
+| find_all
+| find_parent
+| find_parents
+| find_next_sibling
+| find_next_siblings
+| find_previous_sibling
+| find_previous_siblings
+| find_next
+| find_all_next
+| find_previous
+| find_all_previous
+| select
+| append
+| insert
+| insert_before
+| insert_after
+| clear
+| extract
+| decompose
+| replace_with
+| wrap
+| unwrap
+| prettify
+| get_text
+
 
 #### Tag.attrs
 
